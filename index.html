@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="og:type" content="website" />
+        <meta
+            name="og:image"
+            content="https://t3.ftcdn.net/jpg/05/03/75/98/360_F_503759828_kadMu7Zxbk9jNrZE1JjFfVwkkgxqe6KS.jpg"
+        />
+        <meta
+            name="og:title"
+            content="Noob Music Player"
+        />
+        <meta
+            name="og:description"
+            content='This is a simple music player built with HTML, CSS and vanilla JavaScript.'
+        />
+
+        <title>Music Player</title>
+        <link rel="shortcut icon" href="#" />
+        <link rel="stylesheet" href="./styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <div class="player">
+            <!-- Dashboard -->
+            <div class="dashboard">
+                <!-- Header -->
+                <header>
+                    <h4>Now playing:</h4>
+                    <h2>String 57th & 9th</h2>
+                </header>
+
+                <!-- CD -->
+                <div class="cd">
+                    <div
+                        class="cd-thumb"
+                        style="
+                            background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg');
+                        "
+                    ></div>
+                </div>
+
+                <!-- Control -->
+                <div class="control">
+                    <div class="btn btn-repeat">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                        <i class="fas fa-step-backward"></i>
+                    </div>
+                    <div class="btn btn-toggle-play">
+                        <i class="fas fa-pause icon-pause"></i>
+                        <i class="fas fa-play icon-play"></i>
+                    </div>
+                    <div class="btn btn-next">
+                        <i class="fas fa-step-forward"></i>
+                    </div>
+                    <div class="btn btn-random">
+                        <i class="fas fa-random"></i>
+                    </div>
+                </div>
+
+                <input
+                    id="progress"
+                    class="progress"
+                    type="range"
+                    value="0"
+                    step="1"
+                    min="0"
+                    max="100"
+                />
+
+                <audio id="audio" src=""></audio>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist"></div>
+        </div>
+
+        <div id="toast">
+            <!-- <div class="toast toast--success">
+                <div class="toast__icon">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                </div>
+                <div class="toast__body">
+                    <div class="toast__title">Success</div>
+                    <div class="toast__msg">After you get up and running</div>
+                </div>
+                <div class="toast__close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div> -->
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
